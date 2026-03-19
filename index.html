@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Vision AI</title>
+    <!-- Instructions: Open this index.html file in any modern web browser to view the frontend output. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="start-btn">Start Camera</button>
+        <select id="resolution">
+            <option value="60">Low Res (60px)</option>
+            <option value="120" selected>Medium Res (120px)</option>
+            <option value="180">High Res (180px)</option>
+        </select>
+        <label><input type="checkbox" id="color-toggle"> Color Mode</label>
+        <label><input type="checkbox" id="edge-toggle" checked> Edge Detection</label>
+        <label><input type="checkbox" id="scanline-toggle" checked> Scanlines</label>
+        <label><input type="checkbox" id="face-toggle" checked> Face Detect</label>
+    </div>
+    
+    <div class="output-container" id="container">
+        <div class="scanlines" id="scanlines"></div>
+        <pre id="ascii-container"></pre>
+        <video id="pip-video" autoplay playsinline muted></video>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
